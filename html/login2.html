@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        color: red;
+        text-decoration: red;
+        text-decoration: underline;
+    }
+    header .head{
+        width: 1000px;
+        margin: 30px auto;
+    }
+    main{
+        width: 1000px;
+        margin: 0 auto;
+    }
+    main img{
+        float: left;
+    }
+    main .div2{
+        margin: 0 auto;
+        width: 1000px;
+        height: 500px;
+    }
+    main .div1{
+        width: 1000px;
+    }
+    .box{
+        width: 380px;
+        float: right;
+        margin-right: 200px;
+        height: 500px;
+        position: relative;
+    }
+    .box2{
+        width: 310px;
+        height: 260px;
+        background: #fafafa;
+        font-size: 14px; 
+        color: #666666;   
+        padding: 35px;  
+    }
+    .box h4{
+        line-height: 36px;
+        font-size: 18px;
+        color: #333333;
+    }
+    .box2 input{
+        width: 230px;
+        height: 28px;
+        outline: none;
+        border-color:1px solid #cccccc;
+    }
+    .btn{
+        width: 90px;
+        height: 38px;
+        margin-left: 65px;
+        background: #df581d;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+    }
+    .p1{
+        font-size: 10px;
+        margin-left: 60px;
+        margin-top: 40px;
+    }
+    .box4 a{
+        display: block;
+        margin: 5px 0 5px 0;
+    }
+</style>
+<body>
+<header>
+    <div class="head">
+        <a href="index1.html" title="come back"><img src="../images/newlogo.png" alt=""></a>
+    </div>
+</header>
+<main>
+    <div class="div1">
+        <div class="div2">
+            <img src="../images/login.jpg" alt=""> 
+            <div class="box">
+                <h4 style="color:#666666;">会员注册<span style="font-size: 10px;font-weight: normal; color: #c0c0c0;">Login</span></h4>
+                <div class="box2">
+                    <form>                        
+                        用户名：&nbsp;&nbsp;&nbsp;<input type="text" name="text" placeholder='请输入用户名' required><br><br>
+
+                        密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码 : &nbsp;&nbsp;<input type="password" name="password" placeholder="请输入密码" required><br><br>
+
+                        再次输入：<input type="password" name="password2" ><br><br><br>
+
+                        <button class="btn">立即注册</button>
+
+                    </form>
+                    <p class="p1">已有账户<a href="./login.html" style="color: red;">点击登录</a></p>
+                </div>
+                <p style="font-size:10px; color: #999999;line-height: 30px;">使用合作网址账号登录名鞋库：</p>
+                <div class="box4">
+                    <a href="#"><img src="../images/xlwb.png" alt=""></a>
+                    <a href="#"><img src="../images/qq_login.png" alt=""></a>
+                    <a href="#"><img src="../images/taobao_login.png" alt=""></a>
+                    <a href="#"><img src="../images/rr_login.png" alt=""></a>
+                </div>   
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+<script src="../jquery/jquery.js"></script>
+<script>
+    $(".btn").click(function(){
+            if(($("[name='password']").val())===($("[name='password2']").val())){
+                $.ajax({
+                    url:'../php/login2.php',
+                    type:'get',
+                    data:{
+                        text:$("[name='text']").val(),
+                        password:$("[name='password']").val(),
+                    },
+                    /* async:false, */
+
+                    success:function(res){
+                        console.log(res)
+                        var i =JSON.parse(res);
+                        if(i.code==1){
+                            alert('恭喜您注册成功，请登录');
+                            location.href="../html/login.html"
+                        }else{
+                            alert('注册失败')
+                        }
+                    }
+
+                })
+            }else if($("[name='password']").val()!=$("[name='password2']").val()){
+                alert('重复了')
+            }
+    })
+</script>
+
+</html>

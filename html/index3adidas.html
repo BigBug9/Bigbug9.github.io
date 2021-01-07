@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/base.css" type="text/css">
+    <link rel="stylesheet" href="../css/style_n.css" type="text/css">
+    <style>
+        body{
+            background:white;
+        }
+        .page2 a,.page4 a{
+            margin-right: 60px;
+            color: black;
+        }
+        .page2,.page4{
+            border-top: 1px dotted #ccc;
+            border-bottom: 1px dotted #ccc;
+            width: 100%;
+            margin-right: 60px;
+        }
+        .page3 a{
+            width: 100%;
+            margin-right: 50px;
+            color: black;
+        }
+        .li1{
+            border: 1px solid #f1f1f1;
+            height: 290px;
+            width: 220px;
+            margin: 12px;
+            float: left;
+        }
+        .p1{
+            clear: both;
+        }
+        .li1:hover {
+            display: inline-block;
+            background: #f1f1f1;
+        }
+        .em2{
+            display: none;
+            background: #f1f1f1;
+        }
+        .li1:hover .em2{
+            display: block;
+        }
+        .li1 img{
+            margin: 5px auto;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #f1f1f1;
+        } 
+        .li1 em,.li1 p{
+            margin-left: 5px;
+            line-height: 20px;
+        }
+        .li1 p i{
+            margin-left: 0px;
+            text-decoration: line-through;
+        }
+        .Pagination{
+            width: 600px;
+            display: flex;
+            height: 20px;
+            float: right;
+            margin: 60px 0 20px 0;
+            margin-right: 140px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="header_top">
+            <!-- 第一个color:#fe6700; -->
+            <!-- 边框border:1px solid #d6d6d6; -->
+            <a href="" class="welcome">欢迎登录名鞋库 免费注册</a>
+            <a href="" style="padding-right: 20px;">我的名鞋库<span></span></a>
+            <a href="" class="phone" style="padding-right: 20px;"><i></i>手机名鞋库<span></span></a>
+            <!-- 第四/五个color:#323232 -->
+            <a href="">收藏名鞋库</a>
+            <a href="" class="qq"><i></i>名鞋库客服</a>
+            <a href="" class="telphone"><i></i>400 116 2228</a>
+        </div>
+        <div class="header_bottom">
+            <div class="header_bottom_content">
+                <h1></h1>
+                <form class="header_bottom_content_form" action="" method="POST">
+                    <p><input type="text"></p>
+                    <button>搜索</button>
+                    <label for="">热搜：</label>
+                    <label for=""><a href="">跑步鞋</a></label>
+                    <label for=""><a href="">帆布鞋</a></label>
+                    <label for=""><a href="">T恤</a></label>
+                </form>
+                <button class="shopcar">
+                    购物车<span>0</span>件
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="nav">
+        <div class="nav_content">
+            <h2 class="all_foods">
+                <ul class="all_foods_list">
+                    <li class="shoes">
+                        <a href=""><i></i>运动休闲鞋 <span></span></a>
+                        <ul class="shoes_list">
+                            <li>
+                                <div class="shoes_list_top">
+                                    <!-- <i></i> -->
+                                    <i></i>
+                                    <h3>运动男鞋</h3><span>更多</span>
+                                </div>
+                                <div class="shoes_list_bottom">
+                                    <span>休闲鞋</span><span class="hot">帆布鞋</span><span
+                                        class="hot">训练鞋</span><span>网球鞋</span><span>板鞋</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="shoes_list_top">
+                                    <!-- <i></i> -->
+                                    <i></i>
+                                    <h3>运动女鞋</h3><span>更多</span>
+                                </div>
+                                <div class="shoes_list_bottom">
+                                    <span>休闲鞋</span><span class="hot">帆布鞋</span><span
+                                        class="hot">训练鞋</span><span>网球鞋</span><span>板鞋</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="shoes_list_top">
+                                    <!-- <i></i> -->
+
+                                    <h3 style="padding-left: 0;">搜索热词</h3>
+                                </div>
+                                <div class="shoes_list_bottom">
+                                    <span>休闲鞋</span><span class="hot">帆布鞋</span><span
+                                        class="hot">训练鞋</span><span>网球鞋</span><span>板鞋</span>
+                                    <span>网球鞋</sp nan><span>板鞋</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="shoes_list_top">
+                                    <!-- <i></i> -->
+
+                                    <h3 style="padding-left: 0;">热门系列</h3>
+                                </div>
+                                <div class="shoes_list_bottom">
+                                    <span>休闲鞋</span><span class="hot">帆布鞋</span><span
+                                        class="hot">训练鞋</span><span>网球鞋</span><span>板鞋</span>
+                                    <span>网球鞋</span><span>板鞋</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="clothes"><a href=""><i></i>运动休闲服<span></span></a></li>
+                    <li class="run"><a href=""><i></i>跑步<span></span></a></li>
+                    <li class="bask"><a href=""><i></i>篮球<span></span></a></li>
+                    <li class="foot"><a href=""><i></i>足球<span></span></a></li>
+                    <li class="bag"><a href=""><i></i>包包配件<span></span></a></li>
+                    <li class="outdoors"><a href=""><i></i>户外<span></span></a></li>
+                    <li class="shoes_man"><a href=""><i></i>男鞋<span></span></a></li>
+                    <li class="shoes_child"><a href=""><i></i>童鞋<span></span></a></li>
+
+                </ul>
+            </h2>
+            <ul class="nav_list">
+                <li class="active"><a href="">首页</a></li>
+                <li class="nav_lists"><a href="">男子运动</a></li>
+                <li class="wsport nav_lists"><a href="">女子运动</a>
+                    <ul class="wsport_list">
+                        <li class="wsport_list1">
+                            <h4>运动鞋</h4>
+                            <ul>
+                                <li>休闲鞋</li>
+                                <li>板鞋</li>
+                                <li>跑步鞋</li>
+                                <li>帆布鞋</li>
+                                <li>拖鞋</li>
+                                <li>网球鞋</li>
+                                <li>健步鞋</li>
+                            </ul>
+                        </li>
+                        <li class="wsport_list2">
+                            <h4>服装</h4>
+                            <ul>
+                                <li>休闲鞋</li>
+                                <li>板鞋</li>
+                                <li>跑步鞋</li>
+                                <li>帆布鞋</li>
+                                <li>拖鞋</li>
+                                <li>网球鞋</li>
+                                <li>健步鞋</li>
+                                <li>拖鞋</li>
+                                <li>网球鞋</li>
+                                <li>健步鞋</li>
+                            </ul>
+                        </li>
+                        <li class="wsport_list3">
+                            <h4>品牌推荐</h4>
+                            <div class="wsport_list3_logo">
+                                <i class="nai"></i>
+                                <i class="adi1"></i>
+                                <i class="adi2"></i>
+                                <i class="adi3"></i>
+                                <i class="nb"></i>
+                                <i class="sk"></i>
+                            </div>
+
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav_lists"><a href="">儿童</a></li>
+                <li class="nav_lists"><a href="">男鞋</a></li>
+                <li class="nav_lists"><a class="last" href="">户外</a></li>
+            </ul>
+            <div class="nav_content_right">
+                <i></i>
+                <a href="">运动小白</a>
+                <a href="">上新区</a>
+                <a href="">即将售罄</a>
+                <a href="">逢八必杀</a>
+            </div>
+
+        </div>
+    </div>
+    <div style="height: 225px;width: 1000px;margin: 0 auto;" class="content_page">
+        <a style="line-height: 35px;">你的位置：耐克</a>
+        <div style="border: solid 1px #ccc; margin-top: 20px; line-height: 32px; background: #f1f1f1;">
+            <div class="page1">
+                <h4 style="display: inline-block;"><b style="color: black;">耐克</b></h4> (共有239个商品)
+            </div>
+            <div class="page2">
+                类型： <a href="#">鞋子(145)</a><a href="#">服装(80)</a><a href="#">包包(4)</a><a href="#">配件(10)</a>
+            </div>
+            <div class="page3">
+                类型： <a href="#">跑步鞋(45)</a><a href="#">布鞋(80)</a><a href="#">男球鞋(4)</a><a href="#">板鞋(10)</a>
+                        <a href="#">T恤(145)</a><a href="#">POLO衫(80)</a><a href="#">运动裤(4)</a><a href="#">背心(10)</a><br/>
+                        <a href="#" style="margin-left: 45px;">双肩包(15)</a><a href="#">胸衣(80)</a><a href="#">单肩包(4)</a><a href="#">配件(10)</a>
+                        <a href="#">腰包(145)</a><a href="#">单肩包(1)</a><a href="#">训练鞋(4)</a><a href="#">帽子(6)</a>
+            </div>
+            <div class="page4">
+                性别：<a href="#">男(145)</a> <a href="#">女(85)</a>
+            </div>
+        </div>   
+    </div>
+    <div style="width: 1000px;margin: 0 auto;">
+        <ul class="ul1">
+            
+        </ul>
+        <div class="Pagination"></div>
+        <p class="p1"></p> 
+    </div>
+    <div id="footer">
+        <section class="footer_top">
+            <section class="footer_top_content">
+                <aside>
+                    <h3>客服热线(免长途费)</h3>
+                    <em>400 116 11111</em>
+                    <p>客服时间：9：00-24：00</p>
+                    <p>周末/周日：10：00-24：00</p>
+                    <figure>
+                        <figcaption><img src="../images/erweima_03.png" alt=""></figcaption>
+                        <p>手机名鞋库</p>
+                    </figure>
+                    <figure>
+                        <figcaption><img src="../images/erweima_03.png" alt=""></figcaption>
+                        <p>手机名鞋库</p>
+                    </figure>
+                </aside>
+                <article>
+                    <section class="footer_top_content_article_top">
+                        <div><img src="../images/2014052815002.png" alt=""></div>
+                        <div><img src="../images/2014052815003.png" alt=""></div>
+                        <div><img src="../images/2014052815004.png" alt=""></div>
+                        <div><img src="../images/2014052815005.png" alt=""></div>
+                    </section>
+                    <section class="footer_top_content_article_bottom">
+                        <ul>
+                            <li>支付方式</li>
+                            <li>在线支付</li>
+                            <li>货到付款</li>
+                            <li>发票说明</li>
+                        </ul>
+                        <ul>
+                            <li>支付方式</li>
+                            <li>在线支付</li>
+                            <li>货到付款</li>
+                            <li>发票说明</li>
+                        </ul>
+                        <ul>
+                            <li>支付方式</li>
+                            <li>在线支付</li>
+                            <li>货到付款</li>
+                            <li>发票说明</li>
+                        </ul>
+                        <ul>
+                            <li>支付方式</li>
+                            <li>在线支付</li>
+                            <li>货到付款</li>
+                            <li>发票说明</li>
+                        </ul>
+                    </section>
+
+                </article>
+            </section>
+        </section>
+        <section class="footer_bottom">
+            <p><a href="">关于名鞋库</a><a href="">关于名鞋库</a><a href="">关于名鞋库</a><a href="">关于名鞋库</a><a href="">关于名鞋库</a><a href="">关于名鞋库</a><a href="">关于名鞋库</a><a href="">关于名鞋库</a><a href="">关于名鞋库</a><a href="">关于名鞋库</a><a href="">关于名鞋库</a></p>
+            <span> Copyright © 2008-2014  All Rights Reserved.Copyright © 2008-2014  All Rights Reserved.Copyright © 2008-2014  All Rights Reserved.</span>
+            <article>
+                <div><img src="../images/logo_007_03.png" alt=""></div>
+                <div><img src="../images/logo_007_03.png" alt=""></div>
+                <div><img src="../images/logo_007_03.png" alt=""></div>
+            </article>
+            <aside class="footer_top_bottom">
+                <span>友情链接：</span>
+                <a href="">旅拍婚纱照</a><a href="">婚宴酒店预订</a><a href="">钻戒品牌</a>
+                <a href="">旅拍婚纱照</a><a href="">婚宴酒店预订</a><a href="">钻戒品牌</a>
+                <a href="">旅拍婚纱照</a><a href="">婚宴酒店预订</a><a href="">钻戒品牌</a>
+            </aside>
+        </section>
+    </div>
+    <script src="../js/ajax1.js"></script>
+    <script src="../js/fenyeqi.js"></script> 
+    <script src="../js/index3adidas.js"></script>
+    <script src="../bootstrap/js/jquery-1.11.0.js"></script>
+</body>
+</html>

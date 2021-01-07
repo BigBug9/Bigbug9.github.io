@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        i{
+            font-style: normal;
+        }
+        header{
+            width: 100%;
+            height: 30px;
+            margin-top: 5px;
+            font-size: 12px;
+            border-top: 1px solid #b29ca1;
+            background: #eee;
+        }
+        .box{
+            width: 1000px;
+            margin: 0 auto;
+            line-height: 30px;
+            background: #492525;
+        }
+        .box .box2{
+            float: left;
+        }
+        a{
+            font-size: 12px;
+            text-decoration: none;
+            color:black;
+        }
+        .box>.ul1{
+            float: right;
+        }
+        .box>.ul1>.li1{
+            float: left;
+            list-style: none;    
+            position: relative;
+        }
+        .box>.ul1>.li0{
+            float: left;
+            list-style: none;    
+        }
+        .box>.ul1>.li1>img{
+            position: absolute;
+            right: 0;
+            top: 12px;
+            right: 10px;
+        } 
+        .box>.ul1>.li1>a{
+            text-decoration: none;    
+            padding: 0 20px 0 20px;
+            border-right: 1px solid #ccc;       
+        }
+        .box>.ul1>.li0>a{
+            text-decoration: none;    
+            padding: 0 20px 0 20px;
+            border-right: 1px solid #ccc;       
+        }
+        .box>.ul1>.li1>a:hover{
+            color: red;
+            text-decoration: underline;  
+        }
+        a:hover{
+            color: red;
+            text-decoration: underline;  
+        }
+        .box>.ul1>.li1:hover .liDiv{
+            display: block;
+        }
+        .box>.ul1>.li1:hover .liDiv2{
+            display: block;
+        }
+        .box>.ul1>.li1:hover{
+            background: white;
+        }
+        .liDiv{
+            width: 180px;
+            height: 100px;
+            background: white;
+            border:1px solid #eee;
+            position: absolute;
+            right: 0;
+            display: none;
+            border-top: none;
+        }
+        .liDiv>ul{
+            padding: 15px;
+            width: 150px;
+            height: 70px;
+        }
+        .liDiv>ul>li{
+            float: left;
+            width: 68px;
+            line-height: 26px;
+            list-style: none;
+            border-bottom: dotted 1px #a9a9a9;
+        }
+        .liDiv>ul>li:hover{
+            background: #fff6d4;
+        }
+        .liDiv2{
+            text-align: center;
+            width: 88px;
+            position: absolute;
+            border: 1px solid #eee;
+            display: none;
+            border-top: none;
+        }
+        .content{
+            width: 1000px;
+            height: 90px;
+            margin: 0 auto;
+        }
+        .content>img,.content>ul{
+            float: left;
+        }
+        .content1{
+            float: right;
+            width: 202px;
+            height: 60px;
+            border:1px dotted #a9a9a9;
+            margin-top: 15px;
+            background: url(../images/lxdh.png)no-repeat;
+        }
+        .content>ul>li{
+            float: left;
+            list-style: none;
+        }
+        .content>img{
+            padding-top: 25px;
+        }
+        .content>ul{
+            margin-top: 25px;
+            padding-top: 15px;
+            margin-left: 128px;
+        }
+        .content>ul>li{
+            padding-right: 13px;
+            padding-left: 10px;
+            border-right: 2px #f3f3f3 solid;
+        }
+        .content>ul>li>a:hover{
+            border-bottom: solid 2px #f3f3f3;
+        }
+        .qq{
+            float: left;
+            margin-top: 35px;
+            margin-left: 10px;
+        }
+        .qq2{
+            float: right;
+            margin-top: 35px;
+            margin-right: 15px;
+        }
+        .main{
+            margin: 0 auto;
+            height: 33px;
+            width: 1000px;
+            background: #e5e5e5;
+            overflow: hidden;
+        }
+        .shopCat{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .shopCat>h4{
+            font-size: 16px;
+            line-height: 42px;
+            margin-top: 8px;
+        }
+        .shopCat>table{
+            font-size: 12px;
+        }
+        th{
+            font-weight: normal;
+        }
+        .btn,.btn1{
+            width: 16px;
+            height: 16px;
+            margin-top: 2px;
+            background: #f6f6f6;
+            color: #ffffff;
+            outline: none;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .btn1:hover,.btn:hover{
+            background: #f9bd60;
+        }
+        .table-footer{
+            width: 1000px;
+            float: right;
+            text-align: right;
+            font-size: 14px;
+            padding: 20px 0 0 10px;
+            border-bottom: dotted 1px #ccc;
+        }
+        .jiesuan{
+            font-size: 12px;
+            color:#aaaaaa;
+            position: relative;
+            height: 70px;
+            width: 1000px;
+            padding-top: 20px;
+            border-bottom: solid 2px #960303;
+        }
+        .jiesuan>i{
+            color: red;
+        }
+        .a1{
+            position: absolute;
+            right: 215px;
+            top: 40px;
+            font-size: 14px;
+            /* position: relative; */
+        }
+        .a1 .img1{
+            position: absolute;
+            left: -20px;
+        }
+        .a1 .img2{
+            position: relative;
+            display: none;
+        }
+        .a1:hover .img1{
+            display: none;
+        }
+        .a1:hover .img2{
+            display: inline-block;
+        }
+        .xiadan a{
+            width: 170px;
+            height: 37px;
+            background: #ff7a00;
+            text-align: center;
+            line-height: 37px;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 3px;
+            text-decoration: none;
+            position: absolute;
+            right: 0;
+            top:25px;
+        }
+        footer{
+            width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        footer>ul{
+            display: flex;
+            justify-content: center;
+            line-height: 50px;
+        }
+        footer>ul>li{
+            list-style: none;
+        }
+        footer li a{
+            padding: 0 12px 0 12px;
+            font-size: 12px;
+            color: black;
+            border-right: 1.5px solid #a588a5;
+        }
+        .p2{
+            color:#888;
+            font-size: 12px;
+        }
+        .p2>em{
+            font-weight: bold;
+            font-size: 14px;
+            color: red;
+        }
+        .clean{
+            clear: both;
+        }
+    </style>
+    <script src="../jquery/jquery.js"></script>
+    <header>
+        <div class="box">
+            <div class="box2">
+                欢迎你，
+                <a href="#">亲爱的用户!</a>
+                <a href="#" class="a2">[退出]</a>
+            </div>
+            <ul class="ul1">
+                <li class="li0">
+                    <a href="#">我的订单</a>
+                </li>
+                <li class="li1">
+                    <a href="#">我的名鞋库</a>
+                    <img src="../images/xia.png" alt="">
+                    <div class="liDiv">
+                        <ul>
+                            <li style="margin:0 10px 0 0;">
+                                <a href="#">我的订单</a>
+                            </li>
+                            <li>
+                                <a href="#">我的积分</a>
+                            </li>
+                            <li style="margin:0 10px 0 0;">
+                                <a href="#">优惠券</a>
+                            </li>
+                            <li>
+                                <a href="#">商品管理</a>
+                            </li>
+                            <li style="margin:0 10px 0 0;">
+                                <a href="#">收货地址</a>
+                            </li>
+                            <li>
+                                <a href="#">密码管理</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="li1">
+                    <a href="#">帮助中心</a>
+                    <img src="../images/xia.png" alt="">
+                    <div class="liDiv2">
+                        <a href="#" class="li1A">售后中心</a>
+                    </div>
+                </li>
+            </ul>
+        </div>    
+    </header>
+    <div class="content">
+        <img src="../images/img/logo.png" alt="">
+        <ul>
+            <li><a href="#"><img src="../images/zpbz.png" alt=""></a></li>
+            <li><a href="#"><img src="../images/zyth.png" alt=""></a></li>
+            <li><a href="#"><img src="../images/hdfk.png" alt=""></a></li>
+        </ul>
+        <div class="content1">
+            <div>
+                <div class="qq">
+                    <a href="#">
+                        <img src="../images/qq.png" alt="">
+                        名鞋库客服
+                    </a>
+                </div>
+                <div class="qq2">
+                    <a href="#">
+                        浏览记录
+                        <img src="../images/xia.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <img src="../images/shop-cat.jpg" alt="">
+    </div>
+    <div class="shopCat">
+        <h4>我的购物车</h4>
+        <table cellspacing='0' cellspadding='0' style="border: 1px solid #f0f0f0;" >
+            <tr style="border-bottom: 1px solid #f0f0f0;line-height: 30px;background: #fafafa;">
+                <th style="width: 460px;">商品信息</th>
+                <th style="width: 90px;">赠送积分</th>
+                <th style="width: 90px;">销售价格</th>
+                <th style="width: 90px;">数量</th>
+                <th style="width: 90px;">折扣优惠</th>
+                <th style="width: 90px;">小计</th>
+                <th style="width: 90px;">操作</th>
+            </tr>
+            <tbody style="text-align:center;" class="cart-item">
+                <tr style="border-bottom: dotted 1px #ccc;">
+                    <td style="width: 460px;">
+                        <div style="float: left;"><img src="../images/img/nike18.jpg" style="width: 50px;height: 50px; margin: 15px;"></div>
+                        <div style="float: left;">
+                            <p style="margin-top: 30px;"><a href="#">adidas阿迪达斯男装运动短裤新款网球三条纹运动服D84687</a></p>
+                            <i style="font-style: normal;">(&nbsp;尺码:S,颜色黑&nbsp;)</i>
+                        </div>
+                    </td>
+                    <td style="width: 90px;">0</td>
+                    <td style="width: 90px;" class="p-price">¥107.00</td>
+                    <td style="width: 90px;" class="p-num">
+                        <button class="btn">-</button>
+                        <input class="itxt" type="text" value="1" style="width:31px;height: 20px;border: 1px solid #e0e0e0;">
+                        <button class="btn1">+</button>
+                    </td>
+                    <td style="width: 90px;">-</td>
+                    <td style="width: 90px;" class="p-sum">¥<span>107.00</span></td>
+                    <td style="width: 90px;">
+                        <a href="#" style="text-decoration: none;">收藏</a><br>
+                        <a href="#" style="text-decoration: none;" class="p-action">删除</a>
+                    </td>
+                </tr>
+                <tr style="border-bottom: dotted 1px #ccc;">
+                    <td style="width: 460px;">
+                        <div style="float: left;"><img src="../images/img/nike18.jpg" style="width: 50px;height: 50px; margin: 15px;"></div>
+                        <div style="float: left;">
+                            <p style="margin-top: 30px;"><a href="#">adidas阿迪达斯男装运动短裤新款网球三条纹运动服D84687</a></p>
+                            <i style="font-style: normal;">(&nbsp;尺码:S,颜色黑&nbsp;)</i>
+                        </div>
+                    </td>
+                    <td style="width: 90px;">0</td>
+                    <td style="width: 90px;" class="p-price">¥107.00</td>
+                    <td style="width: 90px;" class="p-num">
+                        <button class="btn">-</button>
+                        <input class="itxt" type="text" value="1" style="width:31px;height: 20px;border: 1px solid #e0e0e0;">
+                        <button class="btn1">+</button>
+                    </td>
+                    <td style="width: 90px;">-</td>
+                    <td style="width: 90px;" class="p-sum">¥<span>107.00</span></td>
+                    <td style="width: 90px;">
+                        <a href="#" style="text-decoration: none;">收藏</a><br>
+                        <a href="#" style="text-decoration: none;" class="p-action">删除</a>
+                    </td>
+                </tr>
+                <tr style="border-bottom: dotted 1px #ccc;">
+                    <td style="width: 460px;">
+                        <div style="float: left;"><img src="../images/img/nike18.jpg" style="width: 50px;height: 50px; margin: 15px;"></div>
+                        <div style="float: left;">
+                            <p style="margin-top: 30px;"><a href="#">adidas阿迪达斯男装运动短裤新款网球三条纹运动服D84687</a></p>
+                            <i style="font-style: normal;">(&nbsp;尺码:S,颜色黑&nbsp;)</i>
+                        </div>
+                    </td>
+                    <td style="width: 90px;">0</td>
+                    <td style="width: 90px;" class="p-price">¥107.00</td>
+                    <td style="width: 90px;" class="p-num">
+                        <button class="btn">-</button>
+                        <input class="itxt" type="text" value="1" style="width:31px;height: 20px;border: 1px solid #e0e0e0;">
+                        <button class="btn1">+</button>
+                    </td>
+                    <td style="width: 90px;">-</td>
+                    <td style="width: 90px;" class="p-sum">¥<span>107.00</span></td>
+                    <td style="width: 90px;">
+                        <a href="#" style="text-decoration: none;">收藏</a><br>
+                        <a href="#" style="text-decoration: none;" class="p-action">删除</a>
+                    </td>
+                </tr>
+                <tr style="border-bottom: dotted 1px #ccc;">
+                    <td style="width: 460px;">
+                        <div style="float: left;"><img src="../images/img/nike18.jpg" style="width: 50px;height: 50px; margin: 15px;"></div>
+                        <div style="float: left;">
+                            <p style="margin-top: 30px;"><a href="#">adidas阿迪达斯男装运动短裤新款网球三条纹运动服D84687</a></p>
+                            <i style="font-style: normal;">(&nbsp;尺码:S,颜色黑&nbsp;)</i>
+                        </div>
+                    </td>
+                    <td style="width: 90px;">0</td>
+                    <td style="width: 90px;" class="p-price">¥107.00</td>
+                    <td style="width: 90px;" class="p-num">
+                        <button class="btn">-</button>
+                        <input class="itxt" type="text" value="1" style="width:31px;height: 20px;border: 1px solid #e0e0e0;">
+                        <button class="btn1">+</button>
+                    </td>
+                    <td style="width: 90px;">-</td>
+                    <td style="width: 90px;" class="p-sum">¥<span>107.00</span></td>
+                    <td style="width: 90px;">
+                        <a href="#" style="text-decoration: none;">收藏</a><br>
+                        <a href="#" style="text-decoration: none;" class="p-action">删除</a>
+                    </td>
+                </tr>
+            </tbody>   
+        </table> 
+        <div class="table-footer clean">
+            商品数量:<span  class="amount-sum">1</span>&nbsp;件
+            <i>享受优惠：</i>99包邮
+            <div style="height: 10px;"></div>
+            <div>
+                商品金额：
+                <span style="font-size: 22px;color: red;" class="price-sum">¥920.00</span>
+            </div>
+        </div>
+        <p class="clean"></p>
+        <div class="jiesuan">
+            <i>提示：</i>加入购物车的商品无法为您保证库存，请及时下单支付。
+            <a href="#" class="a1"> <img src="../images/fdjt1.png" class="img1"><img src="../images/fdjt.png" class="img2">  继续购物</a>
+            <div class="xiadan btn-area">
+                <a href="#">下单结算</a> 
+            </div>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li>
+                <a href="#">
+                    关于名鞋库
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    联系名鞋库
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    人才招聘
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    免责条款
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    法律声明
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    客服中心
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    全部分类
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    友情链接
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    鞋子尺码对照表
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    问答中心
+                </a>
+            </li>
+        </ul>
+        <p class="p2">
+            Copyright 02019-2023 span<em>S .cn</em> All Rights Reserved.
+            <a href="#">闽ICP备08106896号-4</a> 
+            经营许可证闽B2-201800007
+        </p>
+        <div style="margin-top: 5px;">
+            <img src="../images/fuwu.png" alt="">
+            <img src="../images/beian.png" alt="">
+        </div>
+    </footer>
+    <script src="../bootstrap/js/jquery-1.11.0.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../js/ajax1.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script>
+    $(".btn1").click(function() {
+        // 得到当前兄弟文本框的值
+        var n = $(this).siblings(".itxt").val();
+        //console.log(n);
+        n++;
+        $(this).siblings(".itxt").val(n);
+        // 3. 计算小计模块
+        // 当前商品的价格   
+        var p = $(this).parents(".p-num").siblings(".p-price").html();
+        // console.log(p);
+        p = p.substr(1);
+        //console.log(p);
+        var price = (p * n).toFixed(2);
+        // 小计模块 
+        // toFixed(2) 可以让我们保留2位小数
+        $(this).parents(".p-num").siblings(".p-sum").html("￥" + price);
+        getSum();
+    });
+    $(".btn").click(function() {
+        // 得到当前兄弟文本框的值
+        var n = $(this).siblings(".itxt").val();
+        if (n == 1) {
+            return false;
+        }
+        // console.log(n);
+        n--;
+        $(this).siblings(".itxt").val(n);
+        //返回指定的祖先元素
+        var p = $(this).parents(".p-num").siblings(".p-price").html();
+        // console.log(p);
+        p = p.substr(1);
+        console.log(p);
+        // 小计模块 
+        $(this).parents(".p-num").siblings(".p-sum").html("￥" + (p * n).toFixed(2));
+        getSum();
+    });
+    //  4. 用户修改文本框的值 计算 小计模块  
+    $(".itxt").change(function() {
+        // 先得到文本框的里面的值 乘以 当前商品的单价 
+        var n = $(this).val();
+        // 当前商品的单价
+        var p = $(this).parents(".p-num").siblings(".p-price").html();
+         console.log(p);
+        p = p.substr(1);
+        $(this).parents(".p-num").siblings(".p-sum").html("￥" + (p * n).toFixed(2));
+        getSum();
+    });
+    // 5. 计算总计和总额模块
+    getSum();
+
+    function getSum() {
+        var count = 0; // 计算总件数 
+        var money = 0; // 计算总价钱
+        $(".itxt").each(function(i, ele) {
+            count += parseInt($(ele).val());
+        });
+        $(".amount-sum").text(count);
+        $(".p-sum").each(function(i, ele) {
+            money += parseFloat($(ele).text().substr(1));
+        });
+        $(".price-sum").text("￥" + money.toFixed(2));
+    }
+    // 6. 删除商品模块
+    // (1) 商品后面的删除按钮
+    $(".p-action").click(function() {
+        // 删除的是当前的商品 
+        $(this).parents(".cart-item").remove();
+        getSum();
+    });
+    var name1=getCookie('name')
+        console.log(name1);
+        //获取当前地址
+        var url2=location.href
+        console.log(url2);
+    </script>
+    
+</body>
+</html>

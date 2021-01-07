@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            color: red;
+            text-decoration: red;
+            text-decoration: underline;
+        }
+        header .head{
+            width: 1000px;
+            margin: 30px auto;
+        }
+        main{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        main img{
+            float: left;
+        }
+        main .div2{
+            margin: 0 auto;
+            width: 1000px;
+            height: 500px;
+        }
+        main .div1{
+            width: 1000px;
+        }
+        .box{
+            width: 380px;
+            float: right;
+            margin-right: 200px;
+            height: 500px;
+            position: relative;
+        }
+        .box2{
+            width: 310px;
+            height: 260px;
+            background: #fafafa;
+            font-size: 14px; 
+            color: #666666;   
+            padding: 35px;  
+        }
+        .box h4{
+            line-height: 36px;
+            font-size: 18px;
+            color: #333333;
+        }
+        .box2 input{
+            width: 230px;
+            height: 28px;
+            outline: none;
+            border-color:1px solid #cccccc;
+        }
+        button{
+            width: 90px;
+            height: 38px;
+            margin-left: 65px;
+            background: #df581d;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+        .p1{
+            font-size: 10px;
+            margin-left: 60px;
+            margin-top: 40px;
+        }
+        .box4 a{
+            display: block;
+            margin: 5px 0 5px 0;
+        }
+    </style>
+</head>
+<body>
+ 
+    <header>  
+        <div class="head">
+            <a href="index1.html" title="come back"><img src="../images/newlogo.png" alt=""></a>
+        </div>
+    </header>
+    <main>
+        <div class="div1">
+            <div class="div2">
+                <img src="../images/login.jpg" alt=""> 
+                <div class="box">
+                    <h4 style="color:#666666;">会员登录<span style="font-size: 10px;font-weight: normal; color: #c0c0c0;">Login</span></h4>
+                    <div class="box2">
+                        <form action="">                        
+                            用户名：&nbsp;&nbsp;&nbsp;<input type="text" name="text" placeholder='请输入用户名'><br><br>
+
+                            密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码 : &nbsp;&nbsp;<input type="password" name="password" placeholder="请输入密码" required><br><br>
+
+                            <button> <a href="../html/index1.html" style="color: white; text-decoration: none;">登录</a> </button><span> <a href="#" style="font-size: 10px; color: #777;">  忘记密码？</a></span>
+
+                        </form>
+                        <p class="p1">你是俺不是名鞋库会员？<a href="#" style="color: red;">马上注册为会员</a></p>
+                    </div>
+                    <p style="font-size:10px; color: #999999;line-height: 30px;">使用合作网址账号登录名鞋库：</p>
+                    <div class="box4">
+                        <a href="#"><img src="../images/xlwb.png" alt=""></a>
+                        <a href="#"><img src="../images/qq_login.png" alt=""></a>
+                        <a href="#"><img src="../images/taobao_login.png" alt=""></a>
+                        <a href="#"><img src="../images/rr_login.png" alt=""></a>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+<script src="../jquery/jquery.min.js"></script>
+<script>
+    $('button').click(function(){
+        $.ajax({
+            url:"../php/login.php",
+            type:'post',
+            data:{ 
+                name1:$("[name='text']").val(),
+                pwd1:$("[name='password']").val(),
+            },
+            success:function(res){
+                console.log(res);
+                /* var i=JSON.parse(res); */
+                console.log(i.code);
+                console.log("成功的回调");
+                if(i.code==1){
+                    alert('恭喜你登录成功');
+                    location.href="../html/index1.html"
+                }else{
+                    alert('登录失败,用户名或者密码错误')
+                }
+            }
+            
+        })
+    })
+</script>
+</html>

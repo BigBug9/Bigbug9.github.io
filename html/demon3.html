@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/base.css" type="text/css">
+    <link rel="stylesheet" href="../css/style_n.css" type="text/css">
+    <style>
+        body{
+            background:white;
+        }
+        .show-box{
+            width: 1000px;
+            margin: 0 auto;
+            margin-top: 8px;
+            position: relative;
+        }
+        .show-pageBox div{
+            float: left;
+        }
+        .show-pageBox-right{
+            margin-left: 15px;
+        }
+        .show-pageBox-right .nikeBox{
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+            border-bottom: 1px dotted #dbdbdb;
+        }
+        .show-pageBox-right p{
+            line-height: 34px;
+        }
+        .show-pageBox-right p:nth-child(5){
+            border-bottom:1px dotted #bdbdbd ;
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+        }
+        .show-pageBox-right .ul1{
+            background: #ffe9e9;
+            width: 100%;
+            height: 20px;
+        }
+        .show-pageBox-right .ul1 li{
+            float: left;
+            font-size: 12px;
+            color: #fe6464;
+            height: 100%;
+            line-height: px;
+        }
+        .show-pageBox-right .ul1 li:nth-child(1){
+            background: #ff9090;
+            color: white;
+            padding:1px 5px 0 5px;
+            border-right: 2px solid white;;
+        }
+        .show-pageBox-right .ul1 li:nth-child(2){
+            margin: 0 20px 0 5px;
+        }
+        .pagBox-r-f{
+            width: 100%;
+            background: #f5f5f5;
+            margin-top: 8px;
+            position: relative;
+            padding-bottom: 10px;
+            padding-top: 15px;
+        }
+        .ul2{
+            padding-left: 40px;
+        }
+        .ul2 .c{
+            padding: 3px 5px;
+            border: 1px solid #ccc;
+            float: left;
+            margin-left: 4px;
+            position: relative;
+        }
+        .ul2 .c img{
+            display: none;
+        }
+        .ul2 .li9{
+            padding: 3px 5px;
+            float: left;
+            margin-left: 4px;
+            position: relative;
+            border:orange solid 2px;
+        }
+        .ul2 .li9 img{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 10px;
+            height: 10px;
+        }
+        /* .ul2 li:hover{
+            border: solid 2px #ff9900;
+        }
+        .ul2 li:hover img{
+            display: block;
+        } */
+        .ul2 span{
+            float: left;
+            font-size: 12px;
+            color: black;
+            line-height: 25px;
+            margin-right: 8px;
+        }
+        .show-box{
+            margin-bottom: 20px;
+            height: 570px;
+        }
+        .show-box-1{
+            position: relative;
+            margin:8px 0 0 40px;
+        }
+        .show-box-1 span{
+            line-height: 32px;
+            color:black;
+        }
+        .show-box-1 .show-box-2{
+            width: 32px; height: 32px; 
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            left: 50px;
+            border:orange solid 2px;
+        }
+        .show-box-1 .img1{
+            width: 32px; height: 32px; 
+        }
+        .show-box-2>.img2{
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        .show-box-3 button{
+            width: 14px;
+            height: 14px;
+            border: 1px solid #ccc;
+            outline:none;
+            line-height: 12px;
+        }
+        .show-box-3 input{
+            width: 25px;
+            height: 16px;
+            border: 1px solid #ccc;
+            outline:none;
+            text-align: center;
+        }
+        .show-box-3{
+            margin:8px 0 0 20px;
+            color: black;
+            width: 100%;
+        }
+        .shouchan{
+            width: 92px;
+            height: 24px;
+            border: 1px #ccc solid;
+            background: white;
+            position: absolute;
+            border-radius:5px ;
+            right: 4px;
+            bottom: 4px; 
+        }
+        .shouchan a{
+            display: block;
+            width: 92px;
+            height: 24px;
+            text-align: center;
+            line-height: 20px;
+        }
+        .shouchan a span{
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 10px;
+            color:#eb7028;
+        }
+        .show-box-4{
+            height: 32px;
+            border-top: 1px dotted #ccc;
+            border-bottom: 1px dotted #ccc;
+            width: 100%;
+            margin-top: 8px;
+            position: relative;
+            padding-bottom: 10px;
+            padding-top: 15px;
+            position: relative;
+        }
+        .show-box-4 p{
+            font-size: 10px;
+            color: black;
+            position: absolute;
+            bottom: 0;
+        }
+        .show-box-4 p span{
+            color: red;
+            font-weight: bold;
+        }
+        .show-box-5{
+            width: 126px;
+            height: 40px;
+            position: absolute;
+            border-radius: 4px;
+            border: solid 1px #ccc;
+            right: 183px;
+            background: url(../images/img/gwc1.png) no-repeat left center #c70404;
+            bottom: 10px;
+        }
+        .show-box-6{
+            width: 164px; 
+            position: absolute;
+            border: solid 1px #ccc;
+            height: 40px;
+            border: solid 1px #ccc;
+            border-radius: 4px;
+            right: 10px;
+            bottom: 10px;
+        }
+        .show-box-6 a,.show-box-5 a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            text-align: center;
+            line-height: 40px;
+        }
+        .show-box-6 a{
+            background: url(../images/img/gwc.png) no-repeat left center #ee7500; 
+        }
+        .show-box-7 {
+            position: absolute;
+            right: 121px;
+            bottom: 70px;
+            height: 30px;
+            line-height: 30px;
+        }
+        .show-box-7 img{
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+        }
+        .show-box-7 i,.show-box-7 em{
+            display: inline-block;
+        }
+        .page-ul{  
+            position: absolute;
+            bottom: 60px;
+        }
+        .page-ul li{
+            width: 45px;
+            height: 35px;
+            border: #ccc solid 1px;
+            float: left;
+            margin-top: 15px;
+            margin-right: 6px;
+        }
+        .page-ul li img{
+            width: 45px;
+            height: 35px;
+        }
+        .p11{
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            font-size: 12px;
+        }
+        .img11{
+            position:absolute;
+            bottom: 8px;
+            left: 60px;
+            cursor:pointer;
+        }
+        .p12{
+            width: 430px;
+            border-bottom: 1px dotted #ccc;
+            position: absolute;
+            bottom: 0;
+        }
+        .box{
+            width: 430px;
+            height: 430px;
+            position: relative;
+        }
+        .box img{
+            width: 430px;
+            height: 430px;
+        }
+        .rightBox{
+            width: 430px;
+            height: 430px;
+            position: absolute;
+            left:450px;
+            top:30px;
+            overflow: hidden;
+            z-index: 999;
+            display: none;
+        }
+        .rightBox img{
+            width: 860px;
+            height: 860px;
+            position:absolute;
+        }
+        .mark{
+            width: 175px;
+            height: 175px;
+            background: rgba(0,0,0,0.4);
+            position: absolute;
+            left: 0px;
+            top:0px;
+            display:none;
+        }
+        .border1{
+            border:2px solid red;
+        }
+        .imgs{
+            position: absolute;
+            top:400px;
+            left:30px;
+        }
+        .clean{
+            clear: both;
+        }
+    </style>
+    <script src="../jquery/jquery.js"> </script>
+</head>
+<body>
+    <div id="header">
+        <div class="header_top">
+            <!-- 第一个color:#fe6700; -->
+            <!-- 边框border:1px solid #d6d6d6; -->
+            <a href="" class="welcome">欢迎登录名鞋库 免费注册</a>
+            <a href="" style="padding-right: 20px;">我的名鞋库<span></span></a>
+            <a href="" class="phone" style="padding-right: 20px;"><i></i>手机名鞋库<span></span></a>
+            <!-- 第四/五个color:#323232 -->
+            <a href="">收藏名鞋库</a>
+            <a href="" class="qq"><i></i>名鞋库客服</a>
+            <a href="" class="telphone"><i></i>400 116 2228</a>
+        </div>
+        <div class="header_bottom">
+            <div class="header_bottom_content">
+                <h1></h1>
+                <form class="header_bottom_content_form" action="" method="POST">
+                    <p><input type="text"></p>
+                    <button>搜索</button>
+                    <label for="">热搜：</label>
+                    <label for=""><a href="">跑步鞋</a></label>
+                    <label for=""><a href="">帆布鞋</a></label>
+                    <label for=""><a href="">T恤</a></label>
+                </form>
+                <button class="shopcar">
+                    购物车<span>0</span>件
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="nav">
+        <div class="nav_content">
+            <h2 class="all_foods">
+                <ul class="all_foods_list">
+                    <li class="shoes">
+                        <a href=""><i></i>运动休闲鞋 <span></span></a>
+                        <ul class="shoes_list">
+                            <li>
+                                <div class="shoes_list_top">
+                                    <!-- <i></i> -->
+                                    <i></i>
+                                    <h3>运动男鞋</h3><span>更多</span>
+                                </div>
+                                <div class="shoes_list_bottom">
+                                    <span>休闲鞋</span><span class="hot">帆布鞋</span><span
+                                        class="hot">训练鞋</span><span>网球鞋</span><span>板鞋</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="shoes_list_top">
+                                    <!-- <i></i> -->
+                                    <i></i>
+                                    <h3>运动女鞋</h3><span>更多</span>
+                                </div>
+                                <div class="shoes_list_bottom">
+                                    <span>休闲鞋</span><span class="hot">帆布鞋</span><span
+                                        class="hot">训练鞋</span><span>网球鞋</span><span>板鞋</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="shoes_list_top">
+                                    <!-- <i></i> -->
+
+                                    <h3 style="padding-left: 0;">搜索热词</h3>
+                                </div>
+                                <div class="shoes_list_bottom">
+                                    <span>休闲鞋</span><span class="hot">帆布鞋</span><span
+                                        class="hot">训练鞋</span><span>网球鞋</span><span>板鞋</span>
+                                    <span>网球鞋</sp nan><span>板鞋</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="shoes_list_top">
+                                    <!-- <i></i> -->
+
+                                    <h3 style="padding-left: 0;">热门系列</h3>
+                                </div>
+                                <div class="shoes_list_bottom">
+                                    <span>休闲鞋</span><span class="hot">帆布鞋</span><span
+                                        class="hot">训练鞋</span><span>网球鞋</span><span>板鞋</span>
+                                    <span>网球鞋</span><span>板鞋</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="clothes"><a href=""><i></i>运动休闲服<span></span></a></li>
+                    <li class="run"><a href=""><i></i>跑步<span></span></a></li>
+                    <li class="bask"><a href=""><i></i>篮球<span></span></a></li>
+                    <li class="foot"><a href=""><i></i>足球<span></span></a></li>
+                    <li class="bag"><a href=""><i></i>包包配件<span></span></a></li>
+                    <li class="outdoors"><a href=""><i></i>户外<span></span></a></li>
+                    <li class="shoes_man"><a href=""><i></i>男鞋<span></span></a></li>
+                    <li class="shoes_child"><a href=""><i></i>童鞋<span></span></a></li>
+
+                </ul>
+            </h2>
+            <ul class="nav_list">
+                <li class="active"><a href="">首页</a></li>
+                <li class="nav_lists"><a href="">男子运动</a></li>
+                <li class="wsport nav_lists"><a href="">女子运动</a>
+                    <ul class="wsport_list">
+                        <li class="wsport_list1">
+                            <h4>运动鞋</h4>
+                            <ul>
+                                <li>休闲鞋</li>
+                                <li>板鞋</li>
+                                <li>跑步鞋</li>
+                                <li>帆布鞋</li>
+                                <li>拖鞋</li>
+                                <li>网球鞋</li>
+                                <li>健步鞋</li>
+                            </ul>
+                        </li>
+                        <li class="wsport_list2">
+                            <h4>服装</h4>
+                            <ul>
+                                <li>休闲鞋</li>
+                                <li>板鞋</li>
+                                <li>跑步鞋</li>
+                                <li>帆布鞋</li>
+                                <li>拖鞋</li>
+                                <li>网球鞋</li>
+                                <li>健步鞋</li>
+                                <li>拖鞋</li>
+                                <li>网球鞋</li>
+                                <li>健步鞋</li>
+                            </ul>
+                        </li>
+                        <li class="wsport_list3">
+                            <h4>品牌推荐</h4>
+                            <div class="wsport_list3_logo">
+                                <i class="nai"></i>
+                                <i class="adi1"></i>
+                                <i class="adi2"></i>
+                                <i class="adi3"></i>
+                                <i class="nb"></i>
+                                <i class="sk"></i>
+                            </div>
+
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav_lists"><a href="">儿童</a></li>
+                <li class="nav_lists"><a href="">男鞋</a></li>
+                <li class="nav_lists"><a class="last" href="">户外</a></li>
+            </ul>
+            <div class="nav_content_right">
+                <i></i>
+                <a href="">运动小白</a>
+                <a href="">上新区</a>
+                <a href="">即将售罄</a>
+                <a href="">逢八必杀</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="show-box">
+        <div style="line-height: 30px; font-size: 10px;">你当前的位置：名鞋库 >> <a href="./index2.html">耐克</a></div>
+        <div class="show-page">
+            
+        </div>
+    </div>
+    <div id="footer">
+        <section class="footer_top">
+            <section class="footer_top_content">
+                <aside>
+                    <h3>客服热线(免长途费)</h3>
+                    <em>400 116 11111</em>
+                    <p>客服时间：9：00-24：00</p>
+                    <p>周末/周日：10：00-24：00</p>
+                    <figure>
+                        <figcaption><img src="../images/erweima_03.png" alt=""></figcaption>
+                        <p>手机名鞋库</p>
+                    </figure>
+                    <figure>
+                        <figcaption><img src="../images/erweima_03.png" alt=""></figcaption>
+                        <p>手机名鞋库</p>
+                    </figure>
+                </aside>
+                <article>
+                    <section class="footer_top_content_article_top">
+                        <div><img src="../images/2014052815002.png" alt=""></div>
+                        <div><img src="../images/2014052815003.png" alt=""></div>
+                        <div><img src="../images/2014052815004.png" alt=""></div>
+                        <div><img src="../images/2014052815005.png" alt=""></div>
+                    </section>
+                    <section class="footer_top_content_article_bottom">
+                        <ul>
+                            <li>支付方式</li>
+                            <li>在线支付</li>
+                            <li>货到付款</li>
+                            <li>发票说明</li>
+                        </ul>
+                        <ul>
+                            <li>支付方式</li>
+                            <li>在线支付</li>
+                            <li>货到付款</li>
+                            <li>发票说明</li>
+                        </ul>
+                        <ul>
+                            <li>支付方式</li>
+                            <li>在线支付</li>
+                            <li>货到付款</li>
+                            <li>发票说明</li>
+                        </ul>
+                        <ul>
+                            <li>支付方式</li>
+                            <li>在线支付</li>
+                            <li>货到付款</li>
+                            <li>发票说明</li>
+                        </ul>
+                    </section>
+
+                </article>
+            </section>
+        </section>
+        <section class="footer_bottom">
+            <p><a href="">关于名鞋库</a><a href="">关于名鞋库</a><a href="">关于名鞋库</a><a href="">关于名鞋库</a><a href="">关于名鞋库</a><a href="">关于名鞋库</a><a href="">关于名鞋库</a><a href="">关于名鞋库</a><a href="">关于名鞋库</a><a href="">关于名鞋库</a><a href="">关于名鞋库</a></p>
+            <span> Copyright © 2008-2014  All Rights Reserved.Copyright © 2008-2014  All Rights Reserved.Copyright © 2008-2014  All Rights Reserved.</span>
+            <article>
+                <div><img src="../images/logo_007_03.png" alt=""></div>
+                <div><img src="../images/logo_007_03.png" alt=""></div>
+                <div><img src="../images/logo_007_03.png" alt=""></div>
+            </article>
+            <aside class="footer_top_bottom">
+                <span>友情链接：</span>
+                <a href="">旅拍婚纱照</a><a href="">婚宴酒店预订</a><a href="">钻戒品牌</a>
+                <a href="">旅拍婚纱照</a><a href="">婚宴酒店预订</a><a href="">钻戒品牌</a>
+                <a href="">旅拍婚纱照</a><a href="">婚宴酒店预订</a><a href="">钻戒品牌</a>
+            </aside>
+        </section>
+    </div>
+    <script src="../js/ajax1.js"></script>
+    <script>
+        var container=document.querySelector('.show-page');
+        var path1=location.search;
+        var dt;
+        if(path1){
+    //获取参数信息
+            var id1=path1.split('?')[1].split('=')[1];
+            function minus(index) {
+                var amounts=document.getElementsByName("amount");
+                var count=parseInt(amounts[index].value); //数量加1
+        
+                if (count<=1){
+                    alert("购买数量不能为空");
+                } else {
+                    count-=1; //数量-1
+                    amounts[index].value=count;
+                }
+            }
+            function plus(index) {
+                var amounts=document.getElementsByName("amount");
+                var count=parseInt(amounts[index].value)+1;
+                amounts[index].value=count;
+            }
+            //使用异步函数发送请求，并获取响应结果
+            (async function(){
+               
+                var p1=await promiseAjax({
+                    url:'../php/domeo3.php',
+                    data:'id='+id1
+                })
+            //转换格式
+            dt=eval('('+p1+')')
+            console.log(dt)
+            var size2=dt.size.slice(3).split('、');
+            var temp = document.createElement('li')
+            for(let i = 0; i < size2.length; i++){
+                temp.innerHTML += `<li class="c"><a href="#">${size2[i]}</a><img src="../images/dui.gif" alt="" ></li>`
+            }
+            //设置内容
+            var str=`
+            
+                <div class="show-pageBox">
+                    <div class="box">
+                        <img src="${dt.img}" alt="" class='img0'>
+                        <div class="mark"></div>
+                    </div>
+                    <div class="rightBox">
+                        <img src="${dt.img}" alt="">
+                    </div>
+                    <div class="show-pageBox-right">
+                        <div class="nikeBox">
+                            <h4 class='h1' style="display: inline-block; font-weight: bold; color: #000;">${dt.spmc}</h4>
+                            <a href="../html/index2.html" style="display: inline-block;margin-left: 100px;">更多<span style="color:#ff6600;">耐克</span></a>
+                        </div>
+                        <p>吊  牌  价：<i style="text-decoration: line-through;">¥${dt.money2}</i></p>
+                        <p>销  售  价：<i style="font-size: 20px ;font-weight: bold; color: red;">¥</i><span class="span1" style="font-size: 20px ;font-weight: bold;color: red;">${dt.money}</span> ( 5.8折 )   立省： ¥<em>${dt.money2-dt.money}</em></p>
+                        <p>好  评  度：<i style="color: yellow;">☆☆☆☆☆</i><i style="font-size: 10px;">  4.9分   <a href="#" style="color: blue;">(已有11人评论)</a></i></p>
+                        <p>运  费： 名鞋库会员满99包邮  ( 不包括货到付款 )</p>
+                        <ul class="ul1">
+                            <li>促销信息</li>
+                            <li>99包邮</li>
+                            <li>限购3件</li>
+                        </ul>
+                        <div class="pagBox-r-f">
+                            <ul class="ul2">
+                                <span>尺码  ：</span>
+                                ${temp.innerHTML} 
+                                <p class="clean"></p>
+                            </ul>
+                            <div class="show-box-1">
+                                <span>版型：</span><div class="show-box-2"><img src="${dt.img}" class="img1"><img src="../images/dui.gif" class="img2"></div>
+                            </div>  
+                            <br>
+                            <br>     
+                            <br>
+                            <div class="show-box-3">
+                                <span">购买数量：</span> 
+                                <button name="minus" onclick="minus(0)">-</button>
+                                <input type="text" name="amount" value="1" class="ipt1">
+                                <button name="plus" onclick="plus(0)">+</button>
+                            </div>   
+                            <div class="shouchan"><a><span>+  </span>收藏此商品</a></div>           
+                        </div>
+                        <div class="show-box-4">
+                            <p>你将购买<span>1</span>件 黑+白</p>
+                            <div class="show-box-5"><a href="#"></a></div>
+                            <div class="show-box-6"><a href="#" >加入购物车</a></div>
+                        </div>      
+                    </div>
+                </div>  
+                <ul class="page-ul">
+                    <li><img src="${dt.img}" alt=""></li>
+                    <li><img src="${dt.img}" alt=""></li>
+                    <li><img src="${dt.img}" alt=""></li>
+                    <li><img src="${dt.img}" alt=""></li>
+                    <li><img src="${dt.img}" alt=""></li>
+                </ul>
+                <p class="p11">分享到：</p>
+                <a class="img11"><img src="../images/img/web.jpg" alt=""></a>
+                <div class="show-box-7">
+                    <i>名鞋库保障：</i>&nbsp;
+                    <img src="../images/img/zheng.png" alt="">&nbsp;
+                    正品认证&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="../images/img/tui.png" alt="">&nbsp;
+                    自由退货&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="../images/img/mian.png" alt="">&nbsp;
+                    全场满99包邮呀
+                </div>
+                <p class="p12"></p>
+                <p class="clean"></p>   
+    
+            ` 
+           ;
+            container.innerHTML=str;
+            var z=1;
+            var li9=document.querySelector('.ul2').querySelectorAll("li");
+            for(var y=0;y<li9.length;y++){
+                li9[y].onclick= function fn1(){
+                    for(let x=0;x<li9.length;x++){
+                        li9[x].classList.remove('li9');
+                        li9[x].classList.add('c');
+                    }
+                    this.className='z'
+                    z++;
+                    this.className='li9';
+                }
+            }
+            //famgdajing 
+            var showBox = document.querySelector('.show-box-6');
+            var box = document.querySelector('.box')
+            var boxImg = document.querySelector('img')
+            var mark = document.querySelector('.mark')
+            var rightBox = document.querySelector('.rightBox')
+            var rightImg = rightBox.querySelector('img')
+            var ulImg = document.querySelector('.page-ul')
+            var imgs = ulImg.querySelectorAll('img')
+            var show1=document.querySelector('.show-box')
+            //console.log(imgs)
+            showBox.onclick=function(e){
+            var e = e || window.event
+                var target=e.target || e.srcElement
+                //判断点击的对象是否为“加入购物车”
+                if(target.innerHTML=="加入购物车"){
+                    //获取localStrong中的cartList
+                    var cartList=localStorage.getItem("cartList")
+                    if(cartList){
+                        var a=0 //判断要添加的数据是否存在
+                        //把字符串转为数组对象
+                        cartList=JSON.parse(cartList)
+                        //遍历cartlist数组中所有数据
+                        cartList.forEach((item)=>{
+                        //当前满足条件时，代表当前添加的数据在localStorage中存在
+                        if(item.goods_id==dt.goods_id){
+                            item.cart_number=++item.cart_number
+                            a++
+                            localStorage.setItem('cartList',JSON.stringify(cartList))
+                        }
+                        })
+                        //判断当前添加的商品是否存在
+                        if(a==0){
+                        //修改添加的商品数量
+                        dt.cart_number=1
+                        //把当前商品追加到cartList数组中
+                        cartList.push(dt)
+                        //更新localStorage中的数据
+                        localStorage.setItem('cartList',JSON.stringify(cartList))
+                        }
+                    }else{
+                    //修改添加的商品数量
+                    dt.cart_number=1
+                    //在localStrong设置一个cartList属性
+                    localStorage.setItem('cartList',JSON.stringify([dt]))
+                    }
+                }
+            }
+            function move(e){
+                var x1 = e.pageX-show1.offsetLeft-parseInt(mark.offsetWidth/2)
+                var y1 = e.pageY-show1.offsetTop-parseInt(mark.offsetHeight/2)
+                var maxX = box.offsetWidth-mark.offsetWidth
+                var maxY =box.offsetHeight-mark.offsetHeight
+                var minX=minY=0
+                var tempX,tempYs
+                //横向
+                if (x1<minX) {
+                    mark.style.left = minX + 'px'
+                    tempX = 0
+                }else if(x1>maxX){
+                    mark.style.left = maxX + 'px'
+                    tempX = maxX
+                }else{
+                    mark.style.left = x1 + 'px'
+                    tempX = x1
+                }
+                //纵向
+                if (y1<minY) {
+                    mark.style.top = minY + 'px'
+                    tempY = 0
+                }else if (y1>maxY) {
+                    mark.style.top = maxY + 'px'
+                    tempY = maxY
+                }else{
+                    mark.style.top = y1 + 'px'
+                    tempY = y1
+                }
+                rightImg.style.left = -2*tempX + 'px'
+                rightImg.style.top = -2*tempY + 'px'
+            }
+            box.onmouseover = function(e){
+                var e = e || window.event
+                rightBox.style.display='block'
+                mark.style.display = 'block'
+                rightImg.style.display = 'block'
+            }
+            box.onmouseout = function(){
+                rightBox.style.display='none'
+                mark.style.display = 'none'
+                rightImg.style.display = 'none'
+            }
+            box.onmousemove = function(e){
+                var e = e|| window.event
+                move(e)
+            }
+            //小图点击
+            for(var i = 0;i<imgs.length; i++){
+                imgs[i].onclick = function(){
+                    for(var a = 0;a<imgs.length; a++){
+                        imgs[a].className = ''
+                    }
+                    this.className = 'border1'
+                    var src1 = this.getAttribute('src')
+                    boxImg.setAttribute('src',src1)
+                    rightImg.setAttribute('src',src1)
+                }
+            } 
+            var btn=document.querySelector('.show-box-6').children[0]
+            var tu=document.querySelector('.img0').src
+            var jia=document.querySelector('.span1').innerHTML
+            var h1=document.querySelector('.h1').innerHTML
+            var number=document.querySelector('.ipt1').value
+            var i =[]
+            var j ={
+                img:tu,
+                price:jia,
+                desc:h1,
+                num:number
+            }
+            btn.onclick=function(){
+                console.log(JSON.stringify(j));
+                localStorage.setItem('shop',JSON.stringify(j));
+
+            }
+            })()
+            }else{
+            alert("非法进入")
+            location.href='./index2.html'
+            }
+    </script>  
+    <!-- <script src="../bootstrap/js/jquery-1.11.0.js"></script>    -->
+</body> 
+</html>
