@@ -548,6 +548,8 @@
     <script src="../js/ajax1.js"></script>
     <script src="../js/cookie.js"></script>
     <script>
+        var name1=getCookie('name')
+        console.log(name1);
     $(".btn1").click(function() {
         // 得到当前兄弟文本框的值
         var n = $(this).siblings(".itxt").val();
@@ -614,14 +616,72 @@
     // (1) 商品后面的删除按钮
     $(".p-action").click(function() {
         // 删除的是当前的商品 
-        $(this).parents(".cart-item").remove();
+        $(this).parent().parent().remove();
         getSum();
     });
     var name1=getCookie('name')
         console.log(name1);
         //获取当前地址
         var url2=location.href
-        console.log(url2);
+        console.log($(".p-action").parent().parent());
+        var container=document.querySelector('.cart-item')
+//获取localStrong的数据
+var cartlist=localStorage.getItem("cartList") || "[]";
+//转为数据对象
+cartlist=JSON.parse(cartlist)
+
+        //创建变量，拼接所有商品信息
+        var str2=`
+        <tr style="border-bottom: dotted 1px #ccc;">
+                    <td style="width: 460px;">
+                        <div style="float: left;"></div>
+                        <div style="float: left;">
+                            <p style="margin-top: 30px;"><a href="#">${ar2[attr].img}</a></p>
+                            <i style="font-style: normal;">${size1[i]}</i>
+                        </div>
+                    </td>
+                    <td style="width: 90px;">${ar2[attr].xiaoliang}</td>
+                    <td style="width: 90px;" class="p-price">${ar2[attr].money}</td>
+                    <td style="width: 90px;" class="p-num">
+                        <button class="btn">-</button>
+                        <input class="itxt" type="text" value="1" style="width:31px;height: 20px;border: 1px solid #e0e0e0;">
+                        <button class="btn1">+</button>
+                    </td>
+                    <td style="width: 90px;">-</td>
+                    <td style="width: 90px;" class="p-sum">¥<span>${ar2[attr].money}</span></td>
+                    <td style="width: 90px;">
+                        <a href="#" style="text-decoration: none;">收藏</a><br>
+                        <a href="#" style="text-decoration: none;" class="p-action">删除</a>
+                    </td>
+                </tr>
+        `
+    //遍历数组中所有的商品信息
+    cartlist.forEach(item=>{
+        str2+=` 
+        
+            <div class="p-goods">
+                <div class="p-img">
+                    <img src="${item.goods_small_logo}" alt="" id="tu">
+                </div>
+                <div class="p-msg">${item.goods_name}</div>
+            </div>
+            <div class="p-price">￥<span>${item.goods_price}</span></div>
+            <div class="p-num">
+                <div class="quantity-form">
+                    <a href="javascript:;" class="decrement">-</a>
+                    <input type="text" class="itxt" value="${item.cart_number}">
+                    <a href="javascript:;" class="increment">+</a>
+                </div>
+            </div>
+            <div class="p-sum">￥<span>${item.cart_number*item.goods_price}</span></div>
+            <div class="p-action"><a href="javascript:;">删除</a></div>
+        </div>
+        <div class="cart-item">
+            <div class="p-checkbox">
+                <input type="checkbox" name="" id="" class="j-checkbox">
+            </div>
+        `
+    })
     </script>
     
 </body>
